@@ -1,0 +1,6 @@
+2020-03-23 02:53:19,037 | Visitor: An error occurred
+2020-03-23 02:53:19,099 | Visitor: File created: visitor_{their_name}.txt
+2020-03-23 02:55:51,802 | Visitor: An error occurred
+2020-03-23 02:55:51,835 | Visitor: File created: visitor_{MC}.txt
+2020-03-23 02:59:07,960 | Visitor: An error occurred
+2020-03-23 02:59:07,986 | Visitor: File already exists.

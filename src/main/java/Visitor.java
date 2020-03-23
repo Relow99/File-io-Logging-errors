@@ -24,20 +24,21 @@ public class Visitor {
         this.comments =comments;
         this.person_visited =person_visited;
 }
-    public static void Save(String file) throws IOException {
+    public static void Save() {
         try {
             FileWriter myWriter = new FileWriter("this.full_name+\"+this.age+\"+this.visit_date\"+this.visit_time+\"this.comment\"+this.person_visited ");
             myWriter.write("this is a bit tricky, but we learn!");
             myWriter.close();
-            logger.error("Successfully wrote to the file.");
+            logger.debug("Successfully wrote to the file.");
         } catch (IOException e) {
             logger.error("An error occurred");
             e.printStackTrace();
         }
     }
     public static void load(String file) throws IOException {
+        file ="visitor_"+full_name.toLowerCase()+".txt";
     try {
-        File myObj = new File("visitor_{their_name}.txt");
+        File myObj = new File("visitor_{MC}.txt");
         if (myObj.createNewFile()) {
             logger.error("File created: " + myObj.getName());
         } else{
@@ -48,4 +49,5 @@ public class Visitor {
         e.printStackTrace();
     }
 }
-}
+    }
+

@@ -24,7 +24,7 @@ public class Visitor {
         this.comments =comments;
         this.person_visited =person_visited;
 }
-    public static void Save() {
+    public static void Save() throws IOException {
         try {
             FileWriter myWriter = new FileWriter("this.full_name+\"+this.age+\"+this.visit_date\"+this.visit_time+\"this.comment\"+this.person_visited ");
             myWriter.write("this is a bit tricky, but we learn!");

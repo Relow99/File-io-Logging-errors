@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class MainFile {
  public static void main (String [] args) throws Exception {
-     Visitor MC = new Visitor("MC", 22, LocalDate.now(), LocalDateTime.now(), "Okay", "Relow");
+     Visitor MC = new Visitor("MC", 22, LocalDate.now(), LocalDateTime.now(), "here we are", "Relow");
 
      MC.Save();
 

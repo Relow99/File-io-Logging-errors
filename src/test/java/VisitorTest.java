@@ -1,9 +1,8 @@
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
-import java.util.zip.ZipError;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class VisitorTest {
 
@@ -12,8 +11,11 @@ class VisitorTest {
         assertEquals("Successfully wrote to the file",Visitor.Save(""));
     }
     @Test
-    void load() {
+    void load() throws IOException {
         assertSame(Visitor.load("relow Malepa"));
 
+    }
+
+    private void assertSame(String relow_malepa) {
     }
 }

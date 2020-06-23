@@ -1,17 +1,41 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.io.FileWriter;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Scanner;
 
+import static java.lang.System.load;
+
 public class MainFile {
- public static void main (String [] args) throws Exception {
-     Visitor MC = new Visitor("MC", 22, LocalDate.now(), LocalDateTime.now(), "here we are", "Relow");
+    private static int age;
+    private static String full_name;
+    private static String comments;
 
-     MC.Save();
+    public static void main (String [] args) throws Exception {
 
-     MC.load("relow_malepa");
+     Scanner scan = new Scanner(System.in);
+
+     System.out.println("Please enter your full_names ");
+     full_name = scan.nextLine();
+
+     System.out.println("Please enter your age");
+     age = scan.nextInt();
+
+     System.out.println("Please state your reason for visiting");
+     comments = scan.next();
+
+     System.out.println("Thank you");
+     String pov2 = scan.nextLine();
+
+     Visitor.Save("");
+        System.out.println();
+
+     System.out.println("if there's any document you would like to view, please enter y (yes) or n (no)");
+     String answer = scan.nextLine().toLowerCase();
+
+     if(answer.equals("y")){
+         System.out.println();
+         System.out.println("Enter the details of the person you would like to view");
+         String name = scan.next();
+         load(name);
+     }else {
+         System.out.println("Thank you for visiting");
+     }
  }
 }
